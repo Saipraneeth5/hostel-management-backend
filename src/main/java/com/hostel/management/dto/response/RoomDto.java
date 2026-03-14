@@ -1,0 +1,62 @@
+package com.hostel.management.dto.response;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.List;
+
+/**
+ * Full room response.
+ * students field uses StudentSummaryDto (no room field inside)
+ * which is what breaks the Room → Student → Room cycle.
+ */
+public class RoomDto {
+
+    private Long                    id;
+    private String                  roomNumber;
+    private String                  roomType;
+    private Integer                 capacity;
+    private Integer                 occupiedCount;
+    private Integer                 floor;
+    private String                  block;
+    private BigDecimal              monthlyFee;
+    private String                  status;
+    private String                  description;
+    private boolean                 hasAc;
+    private boolean                 hasAttachedBathroom;
+    private List<StudentSummaryDto> students;
+    private LocalDateTime           createdAt;
+    private LocalDateTime           updatedAt;
+
+    public RoomDto() {}
+
+    public Long getId()                              { return id; }
+    public void setId(Long id)                       { this.id = id; }
+    public String getRoomNumber()                    { return roomNumber; }
+    public void setRoomNumber(String v)              { this.roomNumber = v; }
+    public String getRoomType()                      { return roomType; }
+    public void setRoomType(String v)                { this.roomType = v; }
+    public Integer getCapacity()                     { return capacity; }
+    public void setCapacity(Integer v)               { this.capacity = v; }
+    public Integer getOccupiedCount()                { return occupiedCount; }
+    public void setOccupiedCount(Integer v)          { this.occupiedCount = v; }
+    public Integer getFloor()                        { return floor; }
+    public void setFloor(Integer v)                  { this.floor = v; }
+    public String getBlock()                         { return block; }
+    public void setBlock(String v)                   { this.block = v; }
+    public BigDecimal getMonthlyFee()                { return monthlyFee; }
+    public void setMonthlyFee(BigDecimal v)          { this.monthlyFee = v; }
+    public String getStatus()                        { return status; }
+    public void setStatus(String v)                  { this.status = v; }
+    public String getDescription()                   { return description; }
+    public void setDescription(String v)             { this.description = v; }
+    public boolean isHasAc()                         { return hasAc; }
+    public void setHasAc(boolean v)                  { this.hasAc = v; }
+    public boolean isHasAttachedBathroom()           { return hasAttachedBathroom; }
+    public void setHasAttachedBathroom(boolean v)    { this.hasAttachedBathroom = v; }
+    public List<StudentSummaryDto> getStudents()     { return students; }
+    public void setStudents(List<StudentSummaryDto> v){ this.students = v; }
+    public LocalDateTime getCreatedAt()              { return createdAt; }
+    public void setCreatedAt(LocalDateTime v)        { this.createdAt = v; }
+    public LocalDateTime getUpdatedAt()              { return updatedAt; }
+    public void setUpdatedAt(LocalDateTime v)        { this.updatedAt = v; }
+}
