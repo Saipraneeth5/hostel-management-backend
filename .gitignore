@@ -1,0 +1,19 @@
+# Maven build output
+target/
+
+# IDE files
+.settings/
+.classpath
+.project
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Environment / secrets
+.env
+application-local.properties
+
+# OS files
+.DS_Store
+Thumbs.db
